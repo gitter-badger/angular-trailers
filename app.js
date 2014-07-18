@@ -1,13 +1,9 @@
 angular.module('TrailersApp', ['ngRoute', 'ngAnimate'])
 
-  //var car = new Car();
-  //var garage = new Garage(car);
-  //var truck = new Truck().addCar(car).setGarage(garge);
-  //
   /*
-  var today = new Date();
-  var then = new Date(today);
-  then.setTime(today.getTime() + (60 * 60 * 24) * 180);
+    var today = new Date();
+    var then = new Date(today);
+    then.setTime(today.getTime() + (60 * 60 * 24) * 180);
   */
 
   .constant('API_URL', 'http://api.themoviedb.org/3PATH?callback=JSON_CALLBACK&api_key=c080d71535dcb0c169a0bcb1a566ba1b&_=1405692862594&QUERY')
@@ -32,7 +28,6 @@ angular.module('TrailersApp', ['ngRoute', 'ngAnimate'])
   .controller('ListCtrl', function(trailersRequest) {
     var list = this;
 
-    ///t/p/w500/
     trailersRequest('/movie/upcoming').success(function(movies) {
       list.movies = movies.results;
     });
