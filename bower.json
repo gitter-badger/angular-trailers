@@ -1,0 +1,7 @@
+{
+  "name": "Trailers",
+  "devDependencies": {
+    "bourbon": "~3.2.1"
+  },
+  "dependencies": {}
+}

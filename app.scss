@@ -1,0 +1,43 @@
+@import "bower_components/bourbon/dist/bourbon";
+
+.trailers-list {
+  @include display(flex);
+  @include flex-wrap(wrap);
+}
+
+.trailer-entry {
+  min-width:200px;
+  transition:0.2s linear all;
+  @include flex-grow(3);
+}
+
+.trailer-entry img {
+  width:100%;
+  max-width:500px;
+}
+
+.trailer-entry time:before {
+  content: "Coming ";
+}
+
+.trailer-entry.ng-enter {
+  opacity:0;
+}
+
+.trailer-entry.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.trailer-entry.ng-leave {
+  opacity:1;
+}
+
+.trailer-entry.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.trailer-entry.ng-enter-stagger,
+.trailer-entry.ng-leave-stagger {
+  transition-delay:0.1s;
+  transition-duration:0;
+}

@@ -1,0 +1,11 @@
+<input type="search" ng-model="q" placeholder="Search Videos" />
+<div class="trailers-list">
+  <div ng-repeat="movie in list.movies | filter:q" class="trailer-entry">
+    <img ng-src="{{ movieImage(movie.backdrop_path) }}" />
+    <div class="details">
+      <h2>{{ movie.title }}</h2>
+      <time>{{ movie.release_date }}</time> 
+      <a href="#">Watch the trailer</a>
+    </div>
+  </div>
+</div>
